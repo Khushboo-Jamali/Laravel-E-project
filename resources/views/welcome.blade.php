@@ -1,4 +1,8 @@
-@extends('frontend.index')
+{{-- @extends('frontend.index') --}}
+
+{{-- @extends('employees.dashboard') --}}
+@extends('employees.signup')
+
 
 
 
