@@ -59,7 +59,7 @@
             @else
               <img src="{{ asset('assets/img/default-profile.png') }}" alt="Profile" class="rounded-circle">
             @endif
-            <span class="d-none d-md-block dropdown-toggle ps-2">{{ session('username') ?? 'User' }}</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{ session('username') ?? 'user' }}</span>
           </a><!-- End Profile Image Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -96,8 +96,14 @@
 
   </header><!-- End Header -->
 
+
+
+
+
+
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
+
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
@@ -107,25 +113,139 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
+
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#emp-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#emp-nav" data-bs-toggle="collapse" href="">
           <i class="bi bi-journal-text"></i><span>Order</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="emp-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-          <li><a href=""><i class="bi bi-circle"></i><span>Add Order</span></a></li>
-          <li><a href=""><i class="bi bi-circle"></i><span>View Orders</span></a></li>
+        <ul id="emp-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add-order.php">
+              <i class="bi bi-circle"></i><span>Add Order</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="view-orders.php">
+              <i class="bi bi-circle"></i><span>View Orders</span>
+            </a>
+          </li>
+
         </ul>
-      </li><!-- End Order Nav -->
+      </li><!-- End Forms Nav -->
+      </li><!-- End Forms Nav -->
 
-      <!-- Other menu items like Order Details, Deliveries, Products, etc., go here, using similar Blade routes -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#de-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Order Details</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="de-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
-    </ul>
-  </aside><!-- End Sidebar -->
+          <li>
+            <a href="view_details.php">
+              <i class="bi bi-circle"></i><span>View Order Details</span>
+            </a>
+          </li>
+          <li>
+            <a href="add-details.php">
+              <i class="bi bi-circle"></i><span>Add Order Details</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#pat-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Deliveries</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="pat-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+          <li>
+            <a href="add-deliverie.php">
+              <i class="bi bi-circle"></i><span>Add Deliveries</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="view-deliverie.php">
+              <i class="bi bi-circle"></i><span>View Deliveries</span>
+            </a>
+          </li>
+
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#dis-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="dis-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add-product.php">
+              <i class="bi bi-circle"></i><span>Add Product</span>
+            </a>
+          </li>
+          <li>
+            <a href="view-product.php">
+              <i class="bi bi-circle"></i><span>View Products</span>
+            </a>
+          </li>
+
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#st-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Stock</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="st-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add-stock.php">
+              <i class="bi bi-circle"></i><span>Add Stock</span>
+            </a>
+          </li>
+          <li>
+            <a href="view-stock.php">
+              <i class="bi bi-circle"></i><span>View Stocks</span>
+            </a>
+          </li>
+
+        </ul>
+      </li><!-- End Forms Nav -->
+
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#feed" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>FeedBack</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="feed" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+          <li>
+            <a href="view_feedback.php">
+              <i class="bi bi-circle"></i><span>View FeedBack</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+      <!-- End Forms Nav -->
+
+
+
+
+
+  </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
     @yield('content')
   </main>
 
-</body>
 
-</html>
+
+
+
+
+
+
